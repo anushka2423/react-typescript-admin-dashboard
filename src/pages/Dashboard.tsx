@@ -3,6 +3,10 @@ import { BsSearch } from "react-icons/bs";
 import { FaRegBell } from "react-icons/fa";
 import userPic from '../assets/userpic.png'
 import { HiTrendingDown, HiTrendingUp } from "react-icons/hi";
+import data from "../assets/data.json"
+import { BarChart, DoughnutChart } from "../components/Charts";
+import { BiMaleFemale } from "react-icons/bi";
+import DashboardTable from "../components/DashboardTable";
 
 function Dashboard() {
   return (
@@ -19,28 +23,50 @@ function Dashboard() {
           <img src={userPic} alt="User" />
         </div>
         <section className="widget-container">
-          <WidgetItem percent={40} amount={true} value={340000} heading="Revenue" color="rgb(0, 115, 255)" />
-          <WidgetItem percent={-14} amount={false} value={400} heading="Users" color="rgb(0, 198, 202)" />
+          <WidgetItem percent={40} amount={true} value={340000} heading="Revenue" color="rgb(0, 115, 255, 0.5)" />
+          <WidgetItem percent={-14} amount={false} value={400} heading="Users" color="rgb(0, 198, 202, 0.7)" />
           <WidgetItem percent={80} amount={false} value={23000} heading="Transactions" color="rgb(255, 196, 0)" />
-          <WidgetItem percent={30} amount={false} value={1000} heading="Products" color="rgb(76, 0, 255)" />
+          <WidgetItem percent={30} amount={false} value={1000} heading="Products" color="rgb(76, 0, 255, 0.5)" />
         </section>
         <section className="graph-container">
           <div className="revenue-chart">
             <h2>Revenue & Transaction</h2>
             {/* graph here */}
+            <BarChart 
+              data_1={[300, 144, 433, 655, 237, 755, 190]} 
+              data_2={[200, 444, 343, 556, 778, 455, 990]}
+              title_1="revenue"
+              title_2="transaction"
+              bgcolor_1="rgb(225, 99, 132, 0.5"
+              bgcolor_2="rgb(53, 162, 235, 0.5"
+            />
           </div>
           <div className="dashboard-categories">
             <h2>Inventory</h2>
 
-            <CategoryItem heading="Laptops" value = {40} color="green"/>
-            <CategoryItem heading="Shoes" value={100} color=""/>
-            <CategoryItem heading="Cameras" value={80} color=""/>
-            <CategoryItem heading="Jeans" value={60} color=""/>
+            {
+              data.categories.map((category) => (
+                <CategoryItem
+                  key={category.heading}
+                  heading={category.heading}
+                  value={category.value}
+                  color={`hsl(${category.value * 4}, ${category.value}%, 75%)`}
+                />
+              ))
+            }
           </div>
         </section>
         <section className="transaction-container">
-          <div className="gender-chart"></div>
-          <div className="transaction-box"></div>
+          <div className="gender-chart">
+            <h2>Gender Ratio</h2>
+            {/* {Chart} */}
+            <DoughnutChart labels={["Female", "male"] } data={[12, 19]} bgcolor={["hsl(340, 82%, 56%, 50%)", "rgba(53, 162, 235, 0.4)"]} cutout={80}/>
+            <p> <BiMaleFemale/> </p>
+          </div>
+          <div className="transaction-box">
+            {/* {Table} */}
+            <DashboardTable data={data.transaction} />
+          </div>
         </section>
       </main>
 
