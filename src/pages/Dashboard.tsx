@@ -33,12 +33,12 @@ function Dashboard() {
             <h2>Revenue & Transaction</h2>
             {/* graph here */}
             <BarChart 
-              data_1={[300, 144, 433, 655, 237, 755, 190]} 
-              data_2={[200, 444, 343, 556, 778, 455, 990]}
+              data_1={[200, 444, 343, 556, 778, 455, 990]} 
+              data_2={[300, 144, 433, 655, 237, 755, 190]}
               title_1="revenue"
               title_2="transaction"
-              bgcolor_1="rgb(225, 99, 132, 0.5"
-              bgcolor_2="rgb(53, 162, 235, 0.5"
+              bgcolor_1="rgba(64, 224, 208, 0.5"
+              bgcolor_2="rgba(224, 64, 86, 0.5"
             />
           </div>
           <div className="dashboard-categories">
