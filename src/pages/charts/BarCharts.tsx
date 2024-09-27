@@ -31,8 +31,8 @@ const BarCharts = () => {
               data_2={[300, 144, 433, 655, 237, 755, 190]}
               title_1="Products"
               title_2="Users"
-              bgcolor_1={`hsl(260,50%,30%)`}
-              bgcolor_2={`hsl(360,90%,90%)`}
+              bgColor_1={`hsl(260,50%,30%)`}
+              bgColor_2={`hsl(360,90%,90%)`}
             />
           <h2>Top Selling Products & Top Customers</h2>
         </section>
@@ -46,8 +46,8 @@ const BarCharts = () => {
               data_2={[]}
               title_1="Products"
               title_2=""
-              bgcolor_1={`hsl(180, 40%, 50%)`}
-              bgcolor_2=""
+              bgColor_1={`hsl(180, 40%, 50%)`}
+              bgColor_2=""
               labels={months}
             />
           <h2>Orders throughout the year</h2>

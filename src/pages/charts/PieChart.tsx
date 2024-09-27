@@ -29,7 +29,7 @@ const PieCharts = () => {
             <DoughnutChart
               labels={categories.map((i) => i.heading)}
               data={categories.map((i) => i.value)}
-              bgcolor={categories.map(
+              backgroundColor={categories.map(
                 (i) => `hsl(${i.value * 4},${i.value}%, 50%)`
               )}
               legends={false}
@@ -44,7 +44,7 @@ const PieCharts = () => {
             <DoughnutChart
               labels={["In Stock", "Out Of Stock"]}
               data={[40, 20]}
-              bgcolor={["hsl(269,80%,40%)", "rgb(53, 162, 255)"]}
+              backgroundColor={["hsl(269,80%,40%)", "rgb(53, 162, 255)"]}
               legends={false}
               offset={[0, 80]}
               cutout={"70%"}
@@ -63,7 +63,7 @@ const PieCharts = () => {
                 "Net Margin",
               ]}
               data={[32, 18, 5, 20, 25]}
-              bgcolor={[
+              backgroundColor={[
                 "hsl(110,80%,40%)",
                 "hsl(19,80%,40%)",
                 "hsl(69,80%,40%)",
@@ -102,7 +102,7 @@ const PieCharts = () => {
             <DoughnutChart
               labels={["Admin", "Customers"]}
               data={[40, 250]}
-              bgcolor={[`hsl(335, 100%, 38%)`, "hsl(44, 98%, 50%)"]}
+              backgroundColor={[`hsl(335, 100%, 38%)`, "hsl(44, 98%, 50%)"]}
               offset={[0, 80]}
             />
           </div>
