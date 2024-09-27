@@ -1,7 +1,7 @@
 import AdminSidebar from "../components/AdminSidebar";
 import { BsSearch } from "react-icons/bs";
 import { FaRegBell } from "react-icons/fa";
-import userPic from '../assets/userpic.png'
+import userPic from '../assets/images/userpic.png'
 import { HiTrendingDown, HiTrendingUp } from "react-icons/hi";
 import data from "../assets/data.json"
 import { BarChart, DoughnutChart } from "../components/Charts";
@@ -37,8 +37,8 @@ function Dashboard() {
               data_2={[300, 144, 433, 655, 237, 755, 190]}
               title_1="revenue"
               title_2="transaction"
-              bgcolor_1="rgba(64, 224, 208, 0.5"
-              bgcolor_2="rgba(224, 64, 86, 0.5"
+              bgColor_1="rgba(64, 224, 208, 0.5"
+              bgColor_2="rgba(224, 64, 86, 0.5"
             />
           </div>
           <div className="dashboard-categories">
@@ -60,7 +60,7 @@ function Dashboard() {
           <div className="gender-chart">
             <h2>Gender Ratio</h2>
             {/* {Chart} */}
-            <DoughnutChart labels={["Female", "male"] } data={[12, 19]} bgcolor={["hsl(340, 82%, 56%, 50%)", "rgba(53, 162, 235, 0.4)"]} cutout={80}/>
+            <DoughnutChart labels={["Female", "male"] } data={[12, 19]} backgroundColor={["hsl(340, 82%, 56%, 50%)", "rgba(53, 162, 235, 0.4)"]} cutout={80}/>
             <p> <BiMaleFemale/> </p>
           </div>
           <div className="transaction-box">

@@ -1,6 +1,9 @@
   @import "mixin";
   @import "dashboard";
   @import "products";
+  @import "charts";
+  @import "dashboardapps";
+  @import "mediaquery";
 
  :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -164,7 +167,7 @@
     font-size: 2rem;
     background-color: white;
     border-radius: 50%;
-    z-index: 9;
+    z-index: 1000;
   }
   
   #close-sidebar {
