@@ -37,4 +37,12 @@ This project is a scalable and dynamic Admin Dashboard built using **React**, **
    cd admin-dashboard
    npm install
    npm start
-  ```
+
+## Screenshots
+
+![Sreenshot of website](https://imgur.com/TZv50DP.png)
+![Sreenshot of website](https://imgur.com/EESyXJ9.png)
+![Sreenshot of website](https://imgur.com/RxkqTt3.png)
+![Sreenshot of website](https://imgur.com/5gdB5df.png)
+![Sreenshot of website](https://imgur.com/jxUuzxe.png)
+![Sreenshot of website](https://imgur.com/XQR19Nk.png)
