@@ -1,50 +1,40 @@
-# React + TypeScript + Vite
+# Admin Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a scalable and dynamic Admin Dashboard built using **React**, **React Router**, **lazy loading**, and **Chart.js** for real-time data visualization. It provides features such as product management, transaction tracking, and various tools to enhance user interaction and business analysis.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Dynamic Routing**: Implemented using `react-router-dom` for seamless page transitions.
+- **Lazy Loading**: Uses React's `Suspense` and `lazy()` for optimized loading and performance.
+- **Charts and Data Visualization**: Integrated **Chart.js** for interactive bar, pie, and line charts to visualize data.
+- **Management Tools**: Includes features for managing products, customers, and transactions.
+- **Custom Applications**: Added stopwatch, coupon generator, and a coin toss app for additional utility.
+- **Responsive Design**: Fully responsive and designed with flexibility using **SASS** for maintainable styles.
 
-## Expanding the ESLint configuration
+## Pages and Modules
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Dashboard**: Overview of key statistics like transactions, revenue, users, and products.
+- **Product Management**: Add, update, and manage products.
+- **Customer Management**: View and manage customer information.
+- **Transaction Management**: Track and manage all business transactions.
+- **Charts**: Visualize data using bar, pie, and line charts.
+- **Custom Apps**: Tools like a stopwatch, coupon generator, and a coin toss app for additional functionality.
 
-- Configure the top-level `parserOptions` property like this:
+## Technologies Used
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **React**: Core framework for building the UI.
+- **React Router**: For handling navigation between the different pages.
+- **Chart.js**: For rendering data visualizations (bar, pie, line charts).
+- **SASS**: For styling components in a scalable and maintainable way.
+- **Lazy Loading**: Used for dynamically loading components to improve performance.
+- **TypeScript**: Ensuring type safety and improving development efficiency.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Installation
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/admin-dashboard.git
+   cd admin-dashboard
+   npm install
+   npm start
+  ```
